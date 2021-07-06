@@ -10,7 +10,8 @@ const {
 
 router
     .route('/')
-    .post(protect, addTodo);
+    .post(protect, addTodo)
+    .get(protect, getMyTodos);
 router
     .route(':id')
     .get(protect, getTodoById)
